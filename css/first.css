@@ -8,6 +8,42 @@
     font-size: 30px;
     font-family: cursive;
 }
+.seleniumMenu{
+    margin: 10px;
+    padding: 8px;
+    width: 260px;
+    background-color: rgb(17, 197, 197);
+    color: rgb(74,74,78);
+    font-size: 30px;
+    font-family: cursive;
+}
+.javaMenu{
+    margin: 10px;
+    padding: 8px;
+    width: 260px;
+    background-color: rgb(17, 197, 197);
+    color: rgb(74,74,78);
+    font-size: 30px;
+    font-family: cursive;
+}
+.gitMenu{
+    margin: 10px;
+    padding: 8px;
+    width: 260px;
+    background-color: rgb(17, 197, 197);
+    color: rgb(74,74,78);
+    font-size: 30px;
+    font-family: cursive;
+}
+.jenkinsMenu{
+    margin: 10px;
+    padding: 8px;
+    width: 260px;
+    background-color: rgb(17, 197, 197);
+    color: rgb(74,74,78);
+    font-size: 30px;
+    font-family: cursive;
+}
 footer{
     text-align: right;
     font-family: cursive;
