@@ -1,5 +1,9 @@
-h2{
-    text-align: center;
+.first{
+    text-align: left;
+    margin: 10px;
+    padding: 8px;
+    width: 260px;
+    background-color: gold;
     color: rgb(74,74,78);
     font-size: 30px;
     font-family: cursive;
