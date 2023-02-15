@@ -44,6 +44,9 @@
     font-size: 30px;
     font-family: cursive;
 }
+table, th, td {
+    border: 1px solid black;
+}
 footer{
     text-align: right;
     font-family: cursive;

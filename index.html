@@ -1,57 +1,95 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Selenium Tutorial</title>
-        <link rel="stylesheet" href="./css/first.css"/>
-        <script>
-            function alertme1(){
-                alert("Hello World");
+
+<head>
+    <title>Selenium Tutorial</title>
+    <link rel="stylesheet" href="./css/first.css" />
+    <script>
+        function alertme1() {
+            alert("Hello World");
+        }
+        function alertme2() {
+            confirm("Do you want to continue?");
+        }
+        function alertme3() {
+            let locationName = prompt("Enter the name you want to be called on the site: ", "location name");
+            if (locationName != null) {
+                document.getElementById("promtText").innerHTML = "Location as " + locationName;
             }
-            function alertme2(){
-                confirm("Do you want to continue?");
-            }
-            function alertme3(){
-                let locationName = prompt("Enter the name you want to be called on the site: ", "location name");
-                if(locationName != null){
-                    document.getElementById("promtText").innerHTML = "Location as " + locationName;
-                }
-            }
-        </script>
-    </head>
-        <body>
-            <header>
-                <div class="first">{selenium tutorial}</div>
-            </header>
-            <div >
-                <a class="seleniumMenu">Selenium</a>
-                <a class="javaMenu">Java</a>
-                <a class="gitMenu">GIT</a>
-                <a class="jenkinsMenu">Jenkins</a>
-            </div>
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="first">{selenium tutorial}</div>
+    </header>
+    <div>
+        <a class="seleniumMenu">Selenium</a>
+        <a class="javaMenu">Java</a>
+        <a class="gitMenu">GIT</a>
+        <a class="jenkinsMenu">Jenkins</a>
+    </div>
 
 
-            <div></div>
-            
-            <div></div>
+    <div></div>
 
-            <nav>
-                <ul>
-                    <li>
-                        1.Abc
-                    </li>
-                    <li>
-                        2.Abc
-                    </li>
-                </ul>
-            </nav>
-            
-            <button class="alertMessage" onclick="alertme1()">Click Me Alert!</button>
-            <button class="confirmMessage" onclick="alertme2()">Click Me Confirmation!</button>
-            <button class="promptMessage" onclick="alertme3()">Click Me Prompt!</button>
-            <p id="promtText"></p>
-            <footer>
-                <p>Author : Francis Antony Raj</p>
-                <p>mailto : francisantontyraj1@gmail.com</p>
-            </footer>
-        </body>
+    <div></div>
+
+    <nav>
+        <ul>
+            <li>
+                1.Abc
+            </li>
+            <li>
+                2.Abc
+            </li>
+        </ul>
+    </nav>
+
+    <button class="alertMessage" onclick="alertme1()">Click Me Alert!</button>
+    <button class="confirmMessage" onclick="alertme2()">Click Me Confirmation!</button>
+    <button class="promptMessage" onclick="alertme3()">Click Me Prompt!</button>
+    <p id="promtText"></p>
+    <table class="tableBorder">
+        <thead>
+        <tbody>
+            <tr>
+                <th>Sno</th>
+                <th>Questions</th>
+                <th>Answers</th>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>What is a collection in Java?</td>
+                <td>--</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>What is a hashmap in Java?</td>
+                <td>--</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Different API status codes?</td>
+                <td>
+                    200, Successful status, during the GET/PATCH/PUT API methods are successful.</br>
+                    201, Successful status, during the POST API method is successful.</br>
+                    401, Unauthorization, when the required resources passed is invalid.</br>
+                    403, Forbiden, when the required resources passed is invalid.</br>
+                    409, Conflict, when the required resources passed is invalid.</br>
+                    500, Internel Server Error, server encoutered an error while processing the request.</br>
+                    502, Bad Gateway, when the required resources passed is invalid.</br>
+                    503, Bad Gateway, when the required resources passed is invalid.</br>
+                </td>
+            </tr>
+        </tbody>
+        </thead>
+    </table>
+    <footer>
+        <p>Author : Francis Antony Raj</p>
+        <p>mailto : francisantontyraj1@gmail.com</p>
+    </footer>
+</body>
+
 </html>
