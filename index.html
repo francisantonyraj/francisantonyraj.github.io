@@ -5,21 +5,30 @@
     <title>Selenium Tutorial</title>
     <link rel="stylesheet" href="./css/first.css" />
     <script src="./script/script.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GSKDHS1NK8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-GSKDHS1NK8');
+    </script>
 </head>
 
 <body>
 
     <div class="content">
-		<h1>Welcome to Selenium Online</h1>
-		<p>UI automation using Selenium.</p>
-	</div>
+        <h1>Welcome to Selenium Online</h1>
+        <p>UI automation using Selenium.</p>
+    </div>
 
     <div class="menu">
-		<a href="#" class="active">Action</a>
+        <a href="#" class="active">Action</a>
         <a href="#" class="alert" onclick="document.getElementById('frame').src='alert.html'">Alert</a>
-		<a href="#" class="webtable" onclick="document.getElementById('frame').src='webtable.html'">Web Table</a>
+        <a href="#" class="webtable" onclick="document.getElementById('frame').src='webtable.html'">Web Table</a>
         <a href="#" class="windows">Windows</a>
-	</div>
+    </div>
     <iframe id="frame"></iframe>
 </body>
 
