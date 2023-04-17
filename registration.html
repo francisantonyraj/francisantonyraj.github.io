@@ -6,6 +6,7 @@
 <body>
 
 	<h1>Registration Form</h1>
+    
 
 	<form>
 		<label for="name">Name:</label>
@@ -29,8 +30,17 @@
 		<label for="birthdate">Date of Birth:</label>
 		<input type="date" id="birthdate" name="birthdate"><br><br>
 
-		<input type="submit" value="Register">
+		<button type="submit" id="myButton" onclick="showPopup()">Registration</button>
+
+
 	</form>
+
+    <script>
+        function showPopup(){
+            var popup = document.getElementById("myPopup");
+          popup.style.display = "none";
+        }
+        </script>
 
 </body>
 </html>
