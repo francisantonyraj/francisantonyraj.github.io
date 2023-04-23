@@ -237,6 +237,73 @@
     }</pre>
         </dd>
 
+        <dt>Q #11: Write a java program whether string is palindrome?</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Input : String value = "madam";</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Output: String is palindrome</dt>
+        <dd>
+            <pre>A : class StringPalindrom {
+    public static void main(String[] args) {
+        String value = "madam";
+        int length=value.length();
+        boolean isPalindrome=true;
+        for(int i=0;i&lt;length;i++){
+            if(value.charAt(i)!=value.charAt(length-1-i)){
+            isPalindrome=false;
+        }
+    }
+    String result = isPalindrome? value+" string is palindrome" : value+" string is not palidrome";
+    System.out.println(result);
+    }
+}</pre>
+        </dd>
+
+        <dt>Q #12: Write a java program whether number is palindrome?</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Input : int value = "151";</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Output: Integer is palindrome</dt>
+        <dd>
+            <pre>A : class IntegerPalindrom {
+    public static void main(String[] args) {
+        int num = 151;
+        int actualValue=0;
+        int expctedValue=num;
+        while (num>0){
+            actualValue=(actualValue*10)+num%10;
+            num=num/10;
+        }
+        String result = actualValue==expctedValue? "Its paliandrome" : "Its not a paliandrome";
+        System.out.print(result);
+    }
+}</pre>
+        </dd>
+
+        <dt>Q #13: Write a java program where,</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Input : String str = "AABBCABCGG";</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Output: A:2 B:2 C:1 A:1 B:1 C:1 G:2</dt>
+        <dd>
+            <pre>A : class CountDuplicateCharInString {
+    public static void main(String[] args) {
+        String str = "AABBCABCGG";
+        char [] ch = str.toCharArray();
+        int j=1;
+        int count=1;
+        for(int i=0;i&lt;ch.length;i++){
+            if(ch[j]==ch[i]){
+                count++;
+                System.out.println(ch[i]+":"+count);
+                count--;
+                j+=2;
+                i+=1;
+            }else{
+                System.out.println(ch[i]+":"+count);
+                System.out.println(ch[j]+":"+count);
+                j+=2;
+                i+=1;
+            }
+        }
+    }
+}</pre>
+        </dd>
+
         <dt>Q: What is the highest mountain in the world?</dt>
         <dd>A: Mount Everest is the highest mountain in the world.</dd>
 
