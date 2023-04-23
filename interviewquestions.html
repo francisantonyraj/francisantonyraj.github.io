@@ -304,6 +304,92 @@
 }</pre>
         </dd>
 
+        <dt>Q #14: Write a java program to remove the duplicate from String?</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Input : String str = "apple";</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Output: aple</dt>
+        <dd>
+            <pre>A : class RemoveDuplicateString {
+    public static void main(String[] args) {
+        String value = "apple";
+        char[] ch = value.toCharArray();
+        char[] temp = new char [ch.length];
+        int j=1,k=0,count=0;
+        for(int i=0;i&lt;ch.length;i++){
+            if(i==ch.length-1){
+                temp[k++]=ch[i];
+            }else if(ch[i]==ch[j++]){
+                count++;
+            }else{
+                temp[k++]=ch[i];
+            }
+        }
+        for(int i=0;i&lt;ch.length-count;i++){
+            System.out.print(temp[i]);
+        }
+    }
+}</pre>
+        </dd>
+
+        <dt>Q #14: Write a java program to print the second largest number in an array list(not a sorted array)?</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Input : int [] num = {3,2,5,1,6};</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Output: 2</dt>
+        <dd>
+            <pre>A : class SecondLargestArray {
+    public static void main(String[] args) {
+        int temp = 0;
+        for (int i = 0; i &lt; num.length; i++) {
+            for (int j = i + 1; j &lt; num.length; j++) {
+                if (num[i] > num[j]) {
+                    temp = num[i];
+                    num[i] = num[j];
+                    num[j] = temp;
+                }
+            }
+        }
+        System.out.println(num[1]);
+    }
+}</pre>
+        </dd>
+
+        <dt>Q #15: Write a java program to reverse the integer?</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Input : int num = 456;</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Output: 654</dt>
+        <dd>
+            <pre>A : class ReverseInteger {
+    public static void main(String[] args) {
+        int num = 456;
+        int temp=0;
+        while(num>0){
+            temp=(temp*10)+num%10;
+            num=num/10;
+        }
+        System.out.println(temp);
+    }
+}</pre>
+        </dd>
+
+        <dt>Q #16: Write a java program to find number of words in a string?</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Input : String str = "This this is is done by Saket Saket is Saket";</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Output: this-2, is-3, done-1, by-1, Saket-3</dt>
+        <dd>
+            <pre>A : class NumberOfWordsInString {
+    public static void main(String[] args) {
+        String str = "This this is is done by Saket Saket is Saket";
+        String[] split = str.split(" ");
+        LinkedHashMap<String, Integer> hashMap = new LinkedHashMap<>();
+        for (int i = 0; i &lt; split.length; i++) {
+            if (hashMap.containsKey(split[i])) {
+                int count = hashMap.get(split[i]);
+                hashMap.put(split[i], ++count);
+            } else {
+                hashMap.put(split[i], 1);
+            }
+        }
+        System.out.println(hashMap);
+    }
+}</pre>
+        </dd>
+
         <dt>Q: What is the highest mountain in the world?</dt>
         <dd>A: Mount Everest is the highest mountain in the world.</dd>
 
