@@ -55,16 +55,16 @@
         <dt>&nbsp;&nbsp;&nbsp;Output: yM eman si cba</dt></code>
         <dd>
             <pre>A #1: class ReverseString {
-        public static void main(String[] args) {
-            String value ="My name is abc";
-            String [] split = value.split(" ");
-            for(int i=0;i&lt;split.length;i++){
-                StringBuilder sb = new StringBuilder(split[i]);
-                sb.reverse().append(" ");
-                System.out.print(sb);
-                }    
-            }
-        }</pre>
+    public static void main(String[] args) {
+        String value ="My name is abc";
+        String [] split = value.split(" ");
+        for(int i=0;i&lt;split.length;i++){
+            StringBuilder sb = new StringBuilder(split[i]);
+            sb.reverse().append(" ");
+            System.out.print(sb);
+        }
+    }
+}</pre>
         </dd>
 
         <dd>
@@ -72,14 +72,13 @@
     public static void main(String[] args) {
         String value ="My name is abc";
         String [] split = value.split(" ");
-                    
-        for(int i=0;i<split.length;i++){
+        for(int i=0;i&lt;split.length;i++){
             char [] ch = split[i].toCharArray();
             int len = ch.length;
             for(int j=len-1;j>=0;j--){
-            System.out.print(ch[j]);
+                System.out.print(ch[j]);
             }
-        System.out.print(" ");
+            System.out.print(" ");
         }
     }
 }</pre>
@@ -90,54 +89,51 @@
         <dt>&nbsp;&nbsp;&nbsp;Output: ones - 3, zeros - 3</dt>
         <dd>
             <pre>A : class CountNumberOfOnesZeros {
-        private static int ones;
-        private static int zeros;
-        
-        public static void main(String[] args) {
-            String value="101010";
-            char [] ch = value.toCharArray();        
-            for(int i=0;i&lt;ch.length;i++){
-                int num = Integer.parseInt(String.valueOf(ch[i]));
-                if(num == 0) {
-                    zeros++;
-                }else{
-                    ones++;
-                }
+    private static int ones;
+    private static int zeros;
+    public static void main(String[] args) {
+        String value="101010";
+        char [] ch = value.toCharArray();        
+        for(int i=0;i&lt;ch.length;i++){
+            int num = Integer.parseInt(String.valueOf(ch[i]));
+            if(num == 0) {
+                zeros++;
+            }else{
+                ones++;
             }
-            System.out.println("zeros "+zeros);
-            System.out.println("ones "+ones);
         }
+        System.out.println("zeros "+zeros);
+        System.out.println("ones "+ones);
     }
-            </pre>
+}</pre>
         </dd>
 
         <dt>Q #5: Write a java program for an array of integers, find two index such that they add up to a specific
             target number?</dt>
-        <dt>&nbsp;&nbsp;&nbsp;Input #1: nums = [2,7,11,15], target = 9</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Input &nbsp;#1: nums = [2,7,11,15], target = 9</dt>
         <dt>&nbsp;&nbsp;&nbsp;Output #1: [0,1]</dt>
-        <dt>&nbsp;&nbsp;&nbsp;Input #2: nums = [3,2,4], target = 6</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Input &nbsp;#2: nums = [3,2,4], target = 6</dt>
         <dt>&nbsp;&nbsp;&nbsp;Output #2: [1,2]</dt>
         <dd>
             <pre>A : class ArrayOfTwoIndex{
-        public static int[] indexOf(int [] nums, int target){
-            int len = nums.length;
-            for(int i=0;i&lt;len;i++){
-                for(int j=i+1;j&lt;len;j++){
-                    if(nums[i]+nums[j]==target){
-                    return new int[]{i,j};
-                    }
+    public static int[] indexOf(int [] nums, int target){
+        int len = nums.length;
+        for(int i=0;i&lt;len;i++){
+            for(int j=i+1;j&lt;len;j++){
+                if(nums[i]+nums[j]==target){
+                return new int[]{i,j};
                 }
             }
-            return new int[]{-1,-1};
         }
-        public static void main(String[] args) {
-            int [] nums = {2,7,11,15};
-            int target =22;
-            for(int i : indexOf(nums,target))
-                System.out.print(i+" ");    
-            }
+    return new int[]{-1,-1};
+}
+    public static void main(String[] args) {
+        int [] nums = {2,7,11,15};
+        int target =22;
+        for(int i : indexOf(nums,target))
+            System.out.print(i+" ");    
         }
-            </pre>
+    }</pre>
         </dd>
 
         <dt>Q #6: Write a java program to remove duplicate numbers from the sorted array?</dt>
@@ -153,8 +149,7 @@
             for(String i : sets)
                 System.out.print(i);
             }
-        }
-            </pre>
+        }</pre>
         </dd>
 
         <dt>Q #7: Write a java program to remove duplicate numbers from the sorted array using inbuild funstions?</dt>
@@ -170,8 +165,7 @@
             for(String i : sets)
                 System.out.print(i);
             }
-        }
-            </pre>
+        }</pre>
         </dd>
 
         <dt>Q #8: Write a java program to remove duplicate numbers from the sorted array <b style="color : red;">
@@ -218,8 +212,7 @@
             System.out.print(value.charAt(i));
         }
     }
-}
-            </pre>
+}</pre>
         </dd>
 
         <dt>Q #10: Write a java program to move all the zeros to end of the array?</dt>
@@ -241,8 +234,7 @@
             List<Integer> integerList = Arrays.stream(result).boxed().collect(Collectors.toList());
             System.out.println(integerList);
         }
-    }
-            </pre>
+    }</pre>
         </dd>
 
         <dt>Q: What is the highest mountain in the world?</dt>
