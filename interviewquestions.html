@@ -26,7 +26,7 @@
 }</pre>
         </dd>
 
-        <dt>Q #2: Sort the Integer array without using any Java build in functions?</dt>
+        <dt>Q #2: Sort the Integer array without using any Java inbuild functions?</dt>
         <dt>&nbsp;&nbsp;&nbsp;Input : int [] num ={9, 3, 4, 2 ,7}</dt>
         <dt>&nbsp;&nbsp;&nbsp;Output: 2,3,4,7,9</dt></code>
         <dd>
@@ -50,7 +50,7 @@
     }</code></pre>
         </dd>
 
-        <dt>Q #3: Write the java program to reverse the string</dt>
+        <dt>Q #3: Write a java program to reverse the string?</dt>
         <dt>&nbsp;&nbsp;&nbsp;Input : My name is abc</dt>
         <dt>&nbsp;&nbsp;&nbsp;Output: yM eman si cba</dt></code>
         <dd>
@@ -83,13 +83,39 @@
                         System.out.print(" ");
                     }
                 }
-            }</code></pre>
+            }</pre>
         </dd>
 
+        <dt>Q #4: Write a java program to count 1 and 0 in a given String?</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Input : String str = "101010";</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Output: ones - 3, zeros - 3</dt>
+        <dd>
+            <pre><code>A : class CountNumberOfOnesZeros {
+                private static int ones;
+                private static int zeros;
+                public static void main(String[] args) {
+                    String value="101010";
+                    char [] ch = value.toCharArray();
+                    
+                    for(int i=0;i&lt;ch.length;i++){
+                        int num = Integer.parseInt(String.valueOf(ch[i]));
+                        if(num == 0) {
+                            zeros++;
+                        }else{
+                            ones++;
+                        }
+                    }
+                    System.out.println("Zeros "+zeros);
+                    System.out.println("Ones "+ones);
+                }
+            }
+            </pre>
+        </dd>
         <dt>Q: What is the highest mountain in the world?</dt>
         <dd>A: Mount Everest is the highest mountain in the world.</dd>
 
-        
+
+        </code>
     </dl>
 </body>
 
