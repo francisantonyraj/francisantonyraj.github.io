@@ -106,8 +106,8 @@
             }
             System.out.println("Zeros "+zeros);
             System.out.println("Ones "+ones);
-            }
         }
+    }
             </pre>
         </dd>
 
@@ -135,6 +135,23 @@
             int target =22;
             for(int i : indexOf(nums,target))
                 System.out.print(i+" ");    
+            }
+        }
+            </pre>
+        </dd>
+
+        <dt>Q #6: Write a java program remove duplicate numbers from Sorted Array?</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Input : int [] nums ={1,2,2,2,3,5};</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Output: [1,2,5]</dt>
+        <dd>
+            <pre><code>A : import java.util.*;
+    import java.util.stream.Collectors;
+    class RemoveDuplicateNumbers {
+        public static void main(String[] args) {
+            int [] nums ={1,2,2,2,3,5};
+            Set<Integer> sets = Arrays.stream(nums).boxed().collect(Collectors.toSet());
+            for(String i : sets)
+                System.out.print(i);
             }
         }
             </pre>
