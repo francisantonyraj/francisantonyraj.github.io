@@ -55,35 +55,34 @@
         <dt>&nbsp;&nbsp;&nbsp;Output: yM eman si cba</dt></code>
         <dd>
             <pre><code>A #1: class ReverseString {
-                public static void main(String[] args) {
-                    String value ="My name is abc";
-                    String [] split = value.split(" ");
-                    for(int i=0;i&lt;split.length;i++){
-                        StringBuilder sb = new StringBuilder(split[i]);
-                        sb.reverse().append(" ");
-                        System.out.print(sb);
-                    }
-                    
-                }
-            }</code></pre>
+        public static void main(String[] args) {
+            String value ="My name is abc";
+            String [] split = value.split(" ");
+            for(int i=0;i&lt;split.length;i++){
+                StringBuilder sb = new StringBuilder(split[i]);
+                sb.reverse().append(" ");
+                System.out.print(sb);
+                }    
+            }
+        }</code></pre>
         </dd>
 
         <dd>
             <pre><code>A #2: class ReverseString {
-                public static void main(String[] args) {
-                    String value ="My name is abc";
-                    String [] split = value.split(" ");
+    public static void main(String[] args) {
+        String value ="My name is abc";
+        String [] split = value.split(" ");
                     
-                    for(int i=0;i<split.length;i++){
-                        char [] ch = split[i].toCharArray();
-                        int len = ch.length;
-                        for(int j=len-1;j>=0;j--){
-                            System.out.print(ch[j]);
-                        }
-                        System.out.print(" ");
-                    }
-                }
-            }</pre>
+        for(int i=0;i<split.length;i++){
+            char [] ch = split[i].toCharArray();
+            int len = ch.length;
+            for(int j=len-1;j>=0;j--){
+            System.out.print(ch[j]);
+            }
+        System.out.print(" ");
+        }
+    }
+}</pre>
         </dd>
 
         <dt>Q #4: Write a java program to count 1 and 0 in a given String?</dt>
@@ -91,26 +90,56 @@
         <dt>&nbsp;&nbsp;&nbsp;Output: ones - 3, zeros - 3</dt>
         <dd>
             <pre><code>A : class CountNumberOfOnesZeros {
-                private static int ones;
-                private static int zeros;
-                public static void main(String[] args) {
-                    String value="101010";
-                    char [] ch = value.toCharArray();
-                    
-                    for(int i=0;i&lt;ch.length;i++){
-                        int num = Integer.parseInt(String.valueOf(ch[i]));
-                        if(num == 0) {
-                            zeros++;
-                        }else{
-                            ones++;
-                        }
-                    }
-                    System.out.println("Zeros "+zeros);
-                    System.out.println("Ones "+ones);
+        private static int ones;
+        private static int zeros;
+        
+        public static void main(String[] args) {
+            String value="101010";
+            char [] ch = value.toCharArray();        
+            for(int i=0;i&lt;ch.length;i++){
+                int num = Integer.parseInt(String.valueOf(ch[i]));
+                if(num == 0) {
+                    zeros++;
+                }else{
+                    ones++;
                 }
             }
+            System.out.println("Zeros "+zeros);
+            System.out.println("Ones "+ones);
+            }
+        }
             </pre>
         </dd>
+
+        <dt>Q #5: Write a java program for an array of integers, find two index such that they add up to a specific
+            target number?</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Input #1: nums = [2,7,11,15], target = 9</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Output #1: [0,1]</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Input #2: nums = [3,2,4], target = 6</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Output #2: [1,2]</dt>
+        <dd>
+            <pre><code>A : class ArrayOfTwoIndex{
+        public static int[] indexOf(int [] nums, int target){
+            int len = nums.length;
+            for(int i=0;i&lt;len;i++){
+            for(int j=i+1;j&lt;len;j++){
+                if(nums[i]+nums[j]==target){
+                return new int[]{i,j};
+                }
+            }
+        }
+        return new int[]{-1,-1};
+        }
+        public static void main(String[] args) {
+            int [] nums = {2,7,11,15};
+            int target =22;
+            for(int i : indexOf(nums,target))
+                System.out.print(i+" ");    
+            }
+        }
+            </pre>
+        </dd>
+
         <dt>Q: What is the highest mountain in the world?</dt>
         <dd>A: Mount Everest is the highest mountain in the world.</dd>
 
