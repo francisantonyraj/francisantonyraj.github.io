@@ -157,6 +157,55 @@
             </pre>
         </dd>
 
+        <dt>Q #7: Write a java program to remove duplicate numbers from the sorted array using inbuild funstions?</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Input : int [] nums ={1,2,2,2,3,5};</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Output: [1,2,5]</dt>
+        <dd>
+            <pre><code>A : import java.util.*;
+    import java.util.stream.Collectors;
+    class RemoveDuplicateNumbers {
+        public static void main(String[] args) {
+            int [] nums ={1,2,2,2,3,5};
+            Set<Integer> sets = Arrays.stream(nums).boxed().collect(Collectors.toSet());
+            for(String i : sets)
+                System.out.print(i);
+            }
+        }
+            </pre>
+        </dd>
+
+        <dt>Q #8: Write a java program to remove duplicate numbers from the sorted array <b>without</b> using inbuild
+            funstions?</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Input : int [] nums ={1,2,2,2,3,5};</dt>
+        <dt>&nbsp;&nbsp;&nbsp;Output: [1,2,5]</dt>
+        <dd>
+            <pre><code>A : class RemoveDuplicateNumbers {
+        public static void main(String [] args){
+            int[] nums = {1, 2, 2, 3, 4, 5};
+            int[] temp = new int[nums.length];
+            int j = 1, k = 0;
+            int target = 0, count = 0;
+            for (int i = 0; i&lt;nums.length; i++) {
+                if (j == nums.length) {
+                    temp[k++] = nums[i];
+                } else {
+                    target = nums[j++];
+                }    
+                
+                if (nums[i]&lt;target) {
+                    temp[k++] = nums[i];
+                } else if (nums[i] == target) {
+                    count++;
+                }       
+            }
+            for (int i = 0; i&lt;=temp.length - count; i++) {
+                System.out.print(temp[i]);
+            }
+        }
+    }
+            </pre>
+        </dd>
+
         <dt>Q: What is the highest mountain in the world?</dt>
         <dd>A: Mount Everest is the highest mountain in the world.</dd>
 
