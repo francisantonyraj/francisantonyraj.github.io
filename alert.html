@@ -6,18 +6,36 @@
         Alert
     </title>
     <link rel="stylesheet" href="./css/first.css" />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GSKDHS1NK8"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
 
-        gtag('config', 'G-GSKDHS1NK8');
-    </script>
 </head>
 
 <body>
-
+    <table>
+        <thead>
+            <th>Alert Name</th>
+            <th>Alert Link</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Alert Box
+                </td>
+                <td><button onclick="alert('Hello, World')">Click Me</button></td>
+            </tr>
+            <tr>
+                <td>
+                    Confirmation Box
+                </td>
+                <td><button onclick="confirm('Are you sure, you want to delete this')">Delete</button></td>
+            </tr>
+            <tr>
+                <td>
+                    Prompt Box
+                </td>
+                <td><button onclick="prompt('Are you sure, you want to delete this')">Enter your name</button></td>
+            </tr>
+        </tbody>
+    </table>
 </body>
+
 </html>
